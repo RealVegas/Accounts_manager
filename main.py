@@ -23,9 +23,8 @@ class User:
 
 
 class Admin(User):
-    def __init__(self, user_id: int, user_name: str, admin_access: str = 'admin') -> None:
+    def __init__(self, user_id: int, user_name: str) -> None:
         super().__init__(user_id, user_name, access='admin')
-        self.__admin_access = admin_access
         self.__user_list = []  # Список для хранения пользователей
 
     def add_user(self, one_user) -> None:
